@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<nav class="breadcrumb">
+    <a class="breadcrumb-item" href="@Url.Action("Index", "Home")">Home / </a>
+    <span class="breadcrumb-item active">Degree</span>
+</nav>
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Degrees
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("Degree", "Degree", new {name = "bsis"})">BSIS</a></li>
+        <li><a href="@Url.Action("Degree", "Degree", new { name = "mism" })">MISM</a></li>
+    </ul>
+</div>
+

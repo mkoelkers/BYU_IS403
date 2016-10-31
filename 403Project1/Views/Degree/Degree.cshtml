@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "Degree";
+}
+<nav class="breadcrumb">
+    <a class="breadcrumb-item" href="@Url.Action("Index", "Home")">Home / </a>
+    <a class="breadcrumb-item" href="@Url.Action("Index", "Degree")">Degree / </a>
+    <span class="breadcrumb-item active">@ViewBag.Degree</span>
+</nav>
+<h2>@ViewBag.Degree</h2>
+<div class="container animated fadeIn">
+    <div class="row">
+        <div class="col-xs-12">
+            <img class="img-thumbnail" src="@ViewBag.Image" alt="IMG not found" />
+        </div>
+    </div>
+</div>
+<div class="container">
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>Coordinator:</th>
+                <th>Title:</th>
+                <th>Address:</th>
+                <th>Phd Education:</th>
+                <th>Masters Education:</th>
+                <th>Bachelors Education:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>@ViewBag.Coordinator</th>
+                <th>@ViewBag.CoordinatorTitle</th>
+                <th>@ViewBag.Address</th>
+                <th>@ViewBag.PhD</th>
+                <th>@ViewBag.Masters</th>
+                <th>@ViewBag.Bachelors</th>
+            </tr>           
+        </tbody>
+    </table>
+</div>
+
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    FAQ 1
+                </a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h2>@ViewBag.FAQ1Q</h2>
+                <blockquote>
+                    <h4>@ViewBag.FAQ1A</h4>
+                </blockquote>
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Answer here..."></textarea>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    FAQ 2
+                </a>
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h2>@ViewBag.FAQ2Q</h2>
+                <blockquote>
+                    <h4>@ViewBag.FAQ2A</h4>
+                </blockquote>
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Answer here..."></textarea>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    FAQ 3
+                </a>
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h2>@ViewBag.FAQ3Q</h2>
+                <blockquote>
+                    <h4>@ViewBag.FAQ3A</h4>
+            </blockquote>
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Answer here..."></textarea>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="comment">Ask your own Question:</label>
+    <textarea class="form-control" rows="5" id="comment" placeholder="Ask here..."></textarea>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
